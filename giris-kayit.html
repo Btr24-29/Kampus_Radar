@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kampüs Radar - Giriş Yap / Kayıt Ol</title>
+</head>
+<body style="font-family: Arial;">
+
+  <!-- Ana Sayfaya Dönüş Linki -->
+    <a href="index.html" style="text-decoration: none; color: black; font-weight: bold; font-size: 16px;">
+      ← Ana Sayfaya Dön (Kampüs Radar)
+    </a>
+
+  <!-- Giriş / Kayıt -->
+  <div style="
+    width: 400px; 
+    margin: 0 auto; 
+    border: 3px solid black; 
+    border-radius: 12px; 
+    padding: 30px; 
+    background-color: white; 
+    text-align: center;
+  ">
+    
+    <h1>KAMPÜS RADAR</h1>
+    <p>Öğrenci ve Mekan Sahibi Giriş Paneli</p>
+
+    <hr style="border-top: 2px dashed black; margin: 25px 0;">
+
+    <!-- Kayıt Ol Butonu (Şifre Kuralı Kontrolü) -->
+    <button onclick="kayitOlKontrol()" style="
+      width: 100%; 
+      padding: 15px; 
+      background-color: #2563eb; 
+      color: white; 
+      border: none; 
+      border-radius: 20px; 
+      font-size: 16px; 
+      font-weight: bold; 
+      cursor: pointer;
+      margin-bottom: 15px;
+    ">
+      Yeni Hesap Oluştur (Kayıt Ol)
+    </button>
+
+    <!-- Giriş Yap Butonu (3 Deneme Haklı Güvenlik Kontrolü) -->
+    <button onclick="girisYapKontrol()" style="
+      width: 100%; 
+      padding: 15px; 
+      background-color: white; 
+      color: black; 
+      border: 3px solid black; 
+      border-radius: 20px; 
+      font-size: 16px; 
+      font-weight: bold; 
+      cursor: pointer;
+    ">
+      Giriş Yap
+    </button>
+
+  </div>
+
+  <!-- JavaScript Dosyası Bağlantısı -->
+  <script src="../js/main.js"></script>
+</body>
+</html>

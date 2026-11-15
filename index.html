@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width="device-width", initial-scale=1.0">
+    <title>Kampüs Radar</title>
+</head>
+
+<!-- "font-family" ile beraber sayfanın font'unu ayarladık, "font-size" ile büyüklüğünü ayarladık  -->
+<body style="font-family: Arial; font-size: 13px;">
+
+
+  <!-- Üst Menü (Logo, Arama Çubuğu ve Giriş Bağlantısı) -->
+  <header class="site-header">
+
+  <table width="100%">
+    <tr>
+    <td class="logo" width="33%" align="left">
+        <button style="
+            background-color: white; 
+            padding: 25px 100px;
+            font-size: 16px;
+            border: 3px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        ">
+        <!-- Button stilini ayarlıyoruz -->
+            <b>KAMPÜS RADAR</b>
+        </button>
+    </td>
+    <td class="arama-cubugu" width="34%" align="center">
+        <button style=" 
+            background-color: white; 
+            padding: 25px 100px;
+            font-size: 16px;
+            border: 3px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        ">
+            <b>MEKAN, KAMPANYA ARA 🔍</b>
+        </button>
+    </td>
+    <td class="giris-kayit" width="33%" align="right">
+        <a href="giris-kayit.html" style="color: black; text-decoration: none;">
+            <button style=" 
+            background-color: white;
+            color: black; 
+            padding: 25px 100px;
+            font-size: 16px;
+            border: 3px solid black;
+            border-radius: 10px;
+            cursor: pointer;
+        ">
+
+            <b>GİRİŞ YAP / KAYIT OL</b>
+            </button>
+        </a>
+    </td>
+    </tr>
+  </table>
+
+  <hr style="height: 2px; background-color: black; border: none;">
+  </header>
+
+  <br/><br/><br/>
+
+  <!-- Ana İçerik Alanı (Filtreler, Harita ve Mekan Detayları) -->
+  <main class="ana-yapi" style="display: flex;">
+      <div style="width: 300px; border: 3px solid black; border-radius: 10px; padding: 25px; background-color: white;">
+  
+  <!-- Başlık -->
+  <center><h1>Bütçe</h1></center>
+
+  <!-- Kaydırma Çubuğu -->
+  <input type="range" min="100" max="1000" value="500" style="width: 100%; accent-color: #2563eb; cursor: pointer;">
+
+  <!-- Altındaki Fiyat Yazıları -->
+  <table width="100%">
+    <tr>
+      <td width="33%" align="left"><b>100TL</b></td>
+      <td width="34%" align="center"><b>500TL</b></td>
+      <td width="33%" align="right"><b>1000TL</b></td>
+    </tr>
+  </table>
+   <hr style="border-top: 2px dashed black; margin: 20px 0;">
+
+<!-- KATEGORİLER BÖLÜMÜ -->
+<center><h2>Kategoriler</h2></center>
+
+  <!-- Kategori Butonları -->
+  <table width="100%" >
+    <tr>
+      <td width="50%">
+        <button style="
+            width: 100%; 
+            padding: 10px; 
+            background-color: white; 
+            color: black; 
+            border: 3px solid #2563eb; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            cursor: pointer;
+        ">
+          Ev Yemekleri
+        </button>
+      </td>
+      <td width="50%">
+        <button style="
+            width: 100%; 
+            padding: 10px; 
+            background-color: white; 
+            color: black; 
+            border: 3px solid #2563eb; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            cursor: pointer;
+        ">
+          Çorba
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <button style="
+            width: 100%; 
+            padding: 10px; 
+            background-color: white; 
+            color: black; 
+            border: 3px solid #2563eb; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            cursor: pointer;
+        ">
+          Fast-food
+        </button>
+      </td>
+      <td width="50%">
+        <button style="
+            width: 100%; 
+            padding: 10px; 
+            background-color: white; 
+            color: black; 
+            border: 3px solid #2563eb; 
+            border-radius: 20px; 
+            font-weight: bold; 
+            cursor: pointer;
+        ">
+          İçecek
+        </button>
+      </td>
+    </tr>
+    
+
+  </table>
+
+  <!-- İkinci Kesikli Ayırıcı Çizgi -->
+  <hr style="border-top: 2px dashed black; margin: 20px 0;">
+
+  <!-- 3. YENİ MEKAN / KAMPANYA EKLE BUTONU -->
+    <button onclick="yeniMekanEkle()" style="
+        width: 100%; 
+        padding: 15px; 
+        background-color: #2563eb; 
+        color: white; 
+        border: none; 
+        border-radius: 20px; 
+        font-size: 16px; 
+        font-weight: bold; 
+        cursor: pointer;
+    ">
+      Yeni Mekan / Kampanya Ekle
+    </button>
+</div>
+
+<!-- Bildirimler ve Favoriler Butonları -->
+<div style="margin-left: 220px;">
+    <button style="
+      background-color: white; 
+      padding: 15px 40px; 
+      font-size: 16px; 
+      border: 3px solid black; 
+      border-radius: 25px; 
+      font-weight: bold; 
+      cursor: pointer;
+      margin-right: 20px;
+    ">
+      Bildirimler
+    </button>
+
+    <button style="
+      background-color: white; 
+      padding: 15px 40px; 
+      font-size: 16px; 
+      border: 3px solid black; 
+      border-radius: 25px; 
+      font-weight: bold; 
+      cursor: pointer;
+    ">
+      Favoriler
+    </button>
+  </div>
+
+<!-- Sol taraftaki tablo (Restoran bilgi kartı) -->
+  <div style="
+    margin-left: 220px; 
+    border: 3px solid #22c55e;
+    border-radius: 12px;
+    width: 340px;
+    padding: 20px;
+    ">
+
+    <!-- Restoran İsmi -->
+    <h2 align="center" style="margin-top: 0;">
+      Merkez Restoran <small>• Doğrulanmış</small>
+    </h2>
+    <p><b>➔ Kampanyalar</b></p>
+    <hr style="border-top: 2px dashed black; margin: 20px 0;">
+
+    <!-- Menü içeriği -->
+    <table width="100%">
+      <tr>
+        <td width="50%">
+          <b>XL Dürüm 200TL</b><br>
+          <small>(10 - 15 Ekim)</small>
+        </td>
+        <td width="50%">
+          <b>Patates %50 İndirim</b><br>
+          <small>(10 - 20 Ekim)</small>
+        </td>
+      </tr>
+    </table>
+    <div>
+    <table width="100%" cellspacing="20">
+      <tr>
+        <td width="50%" align="left" style="border: 2px dashed black; padding: 40px;">
+          <br>Görsel
+        </td>
+        <td width="50%" align="center" style="border: 2px dashed black; padding: 40px;">
+          <br>Görsel
+        </td>
+      </tr>
+    </table>
+    </div>
+
+    <!--  -->
+    <button style="
+    margin-left: 20px; 
+    border: 3px solid #2563eb;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    ">
+      <small><b>Değerlendir</b></small>
+    </button>
+    <small>Puan : 4.5★</small>
+    <button style="
+    margin-left: 20px; 
+    border: 3px solid #2563eb;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    ">
+      <small><b>Değerlendir</b></small>
+    </button>
+    <small>Puan : 4.5★</small>
+    <hr>
+    <button style="
+    margin-left: 20px; 
+    border: 3px solid #2563eb;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    ">
+      <p><b>Menü Görseli</b></p>
+    </button>
+    <small>*Son 5 Gün İçerisinde Güncellendi*</small>
+    <br>
+    <button style="
+    margin-left: 20px; 
+    border: 3px solid #2563eb;
+    border-radius: 25px;
+    background-color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-size: 16px;
+    ">
+      <p><b>Yorumlar</b></p>
+    </button>
+    <small>Puan : 3.5★</small>
+  </div>
+  </main>
+  <!-- Alt Bilgi Alanı -->
+  <footer class="site-footer">
+    <br/><br/><br/><br/><br/><br/><br/>
+    <center><p>&copy; 2026 Kampüs Radar - Tüm Hakları Saklıdır.</p></center>
+  </footer>
+
+  <!-- Projenin ana JavaScript dosyası -->
+  <script src="../js/main.js"></script>
+</body>
+</html>
